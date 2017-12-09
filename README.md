@@ -1,3 +1,3 @@
 # WP_VIPShuttle
-WP PlugIn for VIP Shuttle
+Web Application for VIP Shuttle
 <br> www.kiwilabs.de 
