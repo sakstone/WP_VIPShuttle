@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Operational Availbility</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/w3.css">
+    <script src="static/angular.min.js"></script>
+    <script defer src="static/fontawesome/fontawesome-all.js"></script>
+
+</head>
+<body>
+
+<header class="w3-container w3-dark-gray">
+    <h3>Meine Verfügbarkeiten</h3>
+</header>
+
+
+<!-- TODO Find or Build other Kalender -->
+<div class="w3-center w3-light-gray">
+    <p class="w3-small" style="margin-bottom: 0em">
+        <a href="https://www.schulferien.org/kalender/">Kalender</a> (c) by schulferien.org</p>
+    <iframe src="https://www.schulferien.org/kalender/partner/kalender_partner.html" name="Kalenderframe" width="188" height="170" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+</div>
+
+<!-- MASTER -->
+<div class="w3-container w3-light-gray w3-padding">
+    <header>
+        <h4>Mein Master</h4>
+    </header>
+
+    <div class="w3-card w3-green w3-center w3-padding w3-margin">
+        Master
+
+        <i class="fas fa-edit w3-right w3-hover-opacity"></i>
+
+    </div>
+
+</div>
+
+
+<!-- Special Weeks -->
+<div class="w3-container w3-light-gray w3-padding">
+    <header>
+        <h4>
+            Meine Sonderwochen
+        </h4>
+    </header>
+
+    <div class="w3-card w3-green w3-center w3-padding w3-margin">
+        KW52 2017
+        <i class="fas fa-trash w3-right w3-hover-opacity"></i>
+        <i class="fas fa-edit w3-right w3-margin-right w3-hover-opacity"></i>
+    </div>
+
+    <div class="w3-card w3-green w3-center w3-padding w3-margin">
+        KW2 2018
+        <i class="fas fa-trash w3-right w3-hover-opacity"></i>
+        <i class="fas fa-edit w3-right w3-margin-right w3-hover-opacity"></i>
+    </div>
+
+    <div class="w3-center">
+        <button ng-click="addPosition()" class="w3-button w3-circle w3-green w3-margin">+</button>
+    </div>
+
+</div>
+
+</body>
+</html>

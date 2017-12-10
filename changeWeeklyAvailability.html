@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Weekly Availability</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/w3.css">
+    <script src="static/angular.min.js"></script>
+    <script defer src="static/fontawesome/fontawesome-all.js"></script>
+</head>
+<body>
+<header class="w3-container w3-dark-gray">
+    <h3>KW2 2018</h3>
+</header>
+
+
+<!-- Editing Box -->
+<div class="w3-container w3-padding w3-light-gray">
+
+    <!-- Day Chooser -->
+    <div class="x3-row">
+
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:15%">
+           Mo
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:14%">
+            Di
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:14%">
+            Mi
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:14%">
+            Do
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:14%">
+            Fr
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:14%">
+            Sa
+        </div>
+        <div class="w3-col w3-border w3-center w3-hover-opacity" style="width:15%">
+            So
+        </div>
+
+    </div>
+
+    <!-- Set Start End Times -->
+    <div class="w3-row">
+        <div class="w3-col m6">
+            <label class="w3-text-black"><b>Start</b></label>
+            <div class="w3-cell">
+                <input class="w3-input w3-border w3-right-align" type="number" placeholder="08" step="1" min="0">
+            </div>
+            <div class="w3-cell w3-center" style="width: 1em">
+                <b>:</b>
+            </div>
+            <div class="w3-cell">
+                <input class="w3-input w3-border"  type="number" placeholder="00" step="15" min="0">
+            </div>
+        </div>
+
+        <div class="w3-col m6">
+            <label class="w3-text-black"><b>Ende</b></label>
+            <div class="w3-cell">
+                <input class="w3-input w3-border w3-right-align" type="number" placeholder="08" step="1" min="0">
+            </div>
+            <div class="w3-cell w3-center" style="width: 1em">
+                <b>:</b>
+            </div>
+            <div class="w3-cell">
+                <input class="w3-input w3-border" type="number" placeholder="00" step="15" min="0">
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Chooser -->
+    <div class="w3-row">
+
+        <div> <label class="w3-text-black"><b>Kategorisierung</b></label></div>
+        <div class="w3-col m4">
+            <input class="w3-radio" type="radio" name="category" value="1" checked><label>Verfügbar + Bitte einplanen</label></p>
+        </div>
+
+        <div class="w3-col m4">
+            <input class="w3-radio" type="radio" name="category" value="2"><label>Bedingt Verfügbar</label></p>
+        </div>
+
+        <div class="w3-col m4">
+            <input class="w3-radio" type="radio" name="category" value="0"><label>nicht Verfügbar</label></p>
+        </div>
+
+    </div>
+
+    <!-- Adding Input -->
+    <div class="w3-row">
+        <button class="w3-button w3-block w3-green">Hinzufügen</button>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>
