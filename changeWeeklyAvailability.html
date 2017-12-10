@@ -9,10 +9,70 @@
     <script src="static/angular.min.js"></script>
     <script defer src="static/fontawesome/fontawesome-all.js"></script>
 </head>
-<body>
+<body  ng-app="changeWeeklyAvailabilityApp" ng-controller="myCtrl">
 <header class="w3-container w3-dark-gray">
     <h3>KW2 2018</h3>
 </header>
+
+<!-- Week Overview-->
+<div class="w3-container w3-padding w3-light-gray">
+    <div class="w3-responsive">
+        <table class="w3-table-all w3-tiny">
+
+            <tr>
+                <th>Datum</th>
+                <th ng-repeat="x in Shifts.time track by $index" colspan="2" class="w3-centered">
+                    {{ x }}
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[0]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.monday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[1]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.tuesday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[2]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.wednesday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[3]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.thursday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[4]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.friday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td>{{ Shifts.dates[5]}}</td>
+                <td></td>
+                <td ng-repeat="x in Shifts.saturday track by $index" ng-class="1 == x ? 'w3-green' : (2 == x ? 'w3-yellow' :'')" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td><p style="width: 3em"></p></td>
+                <td></td>
+                <td ng-repeat="x in Shifts.time track by $index"><p></p></td>
+                <td ng-repeat="x in Shifts.time track by $index"><p></p></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
 
 
 <!-- Editing Box -->
@@ -101,6 +161,7 @@
 
 </div>
 
+<script src="angular/changeWeeklyAvailability.js"></script>
 
 </body>
 </html>
